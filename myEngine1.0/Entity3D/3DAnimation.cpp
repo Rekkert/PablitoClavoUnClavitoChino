@@ -95,7 +95,7 @@ D3DXQUATERNION Animation3D::CalcInterpRot(double& cTime, aiQuatKey* keys, int cK
 
 void Animation3D::Update(const double& deltaTime){
 	if(m_stState == PLAY){
-		m_dCTime += (deltaTime/1000) * m_dTPS;
+		m_dCTime += (deltaTime/1000) * m_dTPS * m_fSpeed;
 		while(m_dCTime >= m_dDuration)
 			m_dCTime -= m_dDuration;
 	}

@@ -19,7 +19,6 @@ using namespace MiJuego;
 bool AnimEnable = true;
 int Anim = 0;
 float mSpeed = 0.1f;
-DoMaRe::Node* bsp;
 DoMaRe::Node* Tank;
 DoMaRe::Mesh* mesh;
 bool Scene1::Init(DoMaRe::Import& Importer){
@@ -36,10 +35,11 @@ bool Scene1::Init(DoMaRe::Import& Importer){
 	mainLight->setRange(0.3f);
 	mainLight->enable(true);
 
-	Importer.importScene("bones_all.x", *pkNode);
-	//Importer.importScene("tank.x", *pkNode);
+	//Importer.importScene("bones_all.x", *pkNode);
+	Importer.importScene("tiny.x", *pkNode);
 	pkNode->SetPos(0, 0, 0);
-	pkNode->SetScale(10, 10, 10);
+	//pkNode->SetScale(10, 10, 10); //Scale Bones
+	pkNode->SetScale(0.1, 0.1, 0.1); //Scale Tiny
 
 	mainCamera->SetPosition(0, 0, -20);
 
@@ -67,7 +67,6 @@ bool Scene1::Frame(DoMaRe::Renderer& renderer, DoMaRe::DirectInput& dInput, DoMa
 		case 4:
 			pkNode->PlayAnim("Die");
 			break;
-
 		}
 		pkNode->Update(timer.timeBetweenFrames());
 	}

@@ -268,28 +268,28 @@ bool Import::importScene (const std::string& fileName, Node& SceneRoot){
 Animation3D* Import::CreateAnimation3D(aiAnimation* aiAnim){
 	Animation3D* newAnim = new Animation3D(aiAnim->mName.C_Str(), aiAnim->mDuration, aiAnim->mTicksPerSecond);
 	for(int i=0; i < aiAnim->mNumChannels; i++){
-		aiNodeAnim* currentChanel = aiAnim->mChannels[i];
+		aiNodeAnim* currentChannel = aiAnim->mChannels[i];
 		Animation3D::KeyFrame * keyFrameAux = new Animation3D::KeyFrame();
-		keyFrameAux->name = currentChanel->mNodeName.C_Str();
+		keyFrameAux->name = currentChannel->mNodeName.C_Str();
 
-		keyFrameAux->iPositionKeys = currentChanel->mNumPositionKeys;
-		keyFrameAux->iRotationKeys = currentChanel->mNumRotationKeys;
-		keyFrameAux->iScalingKeys  = currentChanel->mNumScalingKeys;
+		keyFrameAux->iPositionKeys = currentChannel->mNumPositionKeys;
+		keyFrameAux->iRotationKeys = currentChannel->mNumRotationKeys;
+		keyFrameAux->iScalingKeys  = currentChannel->mNumScalingKeys;
 
-		keyFrameAux->positionKey = new aiVectorKey[currentChanel->mNumPositionKeys];
-		for(int j=0; j < currentChanel->mNumPositionKeys; j++){
-			keyFrameAux->positionKey[j].mTime = currentChanel->mPositionKeys[j].mTime;
-			keyFrameAux->positionKey[j].mValue = currentChanel->mPositionKeys[j].mValue;
+		keyFrameAux->positionKey = new aiVectorKey[currentChannel->mNumPositionKeys];
+		for(int j=0; j < currentChannel->mNumPositionKeys; j++){
+			keyFrameAux->positionKey[j].mTime = currentChannel->mPositionKeys[j].mTime;
+			keyFrameAux->positionKey[j].mValue = currentChannel->mPositionKeys[j].mValue;
 		}
-		keyFrameAux->rotationKey = new aiQuatKey[currentChanel->mNumRotationKeys];
-		for(int j=0; j < currentChanel->mNumRotationKeys; j++){
-			keyFrameAux->rotationKey[j].mTime  = currentChanel->mRotationKeys[j].mTime;
-			keyFrameAux->rotationKey[j].mValue = currentChanel->mRotationKeys[j].mValue;
+		keyFrameAux->rotationKey = new aiQuatKey[currentChannel->mNumRotationKeys];
+		for(int j=0; j < currentChannel->mNumRotationKeys; j++){
+			keyFrameAux->rotationKey[j].mTime  = currentChannel->mRotationKeys[j].mTime;
+			keyFrameAux->rotationKey[j].mValue = currentChannel->mRotationKeys[j].mValue;
 		}
-		keyFrameAux->scalingKey = new aiVectorKey[currentChanel->mNumScalingKeys];
-		for(int j=0; j < currentChanel->mNumScalingKeys; j++){
-			keyFrameAux->scalingKey[j].mTime = currentChanel->mScalingKeys[j].mTime;
-			keyFrameAux->scalingKey[j].mValue = currentChanel->mScalingKeys[j].mValue;
+		keyFrameAux->scalingKey = new aiVectorKey[currentChannel->mNumScalingKeys];
+		for(int j=0; j < currentChannel->mNumScalingKeys; j++){
+			keyFrameAux->scalingKey[j].mTime = currentChannel->mScalingKeys[j].mTime;
+			keyFrameAux->scalingKey[j].mValue = currentChannel->mScalingKeys[j].mValue;
 		}
 
 		newAnim->AddFrame(keyFrameAux);

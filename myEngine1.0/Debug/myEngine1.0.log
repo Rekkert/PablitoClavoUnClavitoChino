@@ -1,45 +1,10 @@
-﻿Build started 01/06/2015 05:57:15 p.m..
-     1>Project "C:\Users\85\Desktop\Graficos3\myEngine1.0\myEngine1.0.vcxproj" on node 2 (Build target(s)).
+﻿Build started 01/06/2015 08:08:24 p.m..
+     1>Project "C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\myEngine1.0\myEngine1.0.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D MYENGINE_EXPORTS /D _WINDLL /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt 3DBuffers\pg2_indexbuffer.cpp 3DBuffers\pg2_vertexbuffer.cpp Engine.cpp Entity2D\animation.cpp Entity2D\Entity2D.cpp Entity2D\Quad.cpp Entity2D\Sprite.cpp Entity3D\3DAnimation.cpp Entity3D\Entity3D.cpp Entity3D\Mesh.cpp Entity3D\Node.cpp Entity3D\Vector3.cpp Game.cpp input\pg1_directinput.cpp input\pg1_input.cpp Physics\Collider.cpp Physics\Physics.cpp Physics\RigidBody.cpp Renderer\EMath.cpp Renderer\Frustrum.cpp Renderer\Light.cpp Renderer\Material.cpp Renderer\Renderer.cpp Renderer\RenderTypes.cpp Renderer\Window.cpp Scene\Camera.cpp Scene\Import.cpp Scene\Scene.cpp Sound\Sound.cpp timer\pg1_timer.cpp TinyXML\tinyxml2.cpp VertexBuffer\VertexBuffer.cpp
-         VertexBuffer.cpp
-         tinyxml2.cpp
-         pg1_timer.cpp
-         Sound.cpp
-         Scene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D MYENGINE_EXPORTS /D _WINDLL /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Scene\Import.cpp
          Import.cpp
-         Camera.cpp
-         Window.cpp
-         RenderTypes.cpp
-         Renderer.cpp
-         Material.cpp
-         Light.cpp
-         Frustrum.cpp
-         EMath.cpp
-         RigidBody.cpp
-         Physics.cpp
-         Collider.cpp
-         pg1_input.cpp
-         pg1_directinput.cpp
-         Game.cpp
-         Generating Code...
-         Compiling...
-         Vector3.cpp
-         Node.cpp
-     1>c:\users\85\desktop\graficos3\myengine1.0\entity3d\node.cpp(72): warning C4305: 'argument' : truncation from 'double' to 'const float'
-         Mesh.cpp
-         Entity3D.cpp
-         3DAnimation.cpp
-         Sprite.cpp
-         Quad.cpp
-         Entity2D.cpp
-         animation.cpp
-         Engine.cpp
-         pg2_vertexbuffer.cpp
-         pg2_indexbuffer.cpp
-         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\85\Desktop\Graficos3\Debug\myEngine1.0.dll" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\85\Desktop\Graficos3\ext\havok\Lib\win32_vs2010\dev_dll d3dx9.lib d3d9.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\85\Desktop\Graficos3\Debug\myEngine1.0.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\85\Desktop\Graficos3\Debug\myEngine1.0.lib" /MACHINE:X86 /DLL Debug\pg2_indexbuffer.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\Debug\myEngine1.0.dll" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\ext\havok\Lib\win32_vs2010\dev_dll d3dx9.lib d3d9.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\Debug\myEngine1.0.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\Debug\myEngine1.0.lib" /MACHINE:X86 /DLL Debug\pg2_indexbuffer.obj
          Debug\pg2_vertexbuffer.obj
          Debug\Engine.obj
          Debug\animation.obj
@@ -71,10 +36,9 @@
          Debug\pg1_timer.obj
          Debug\tinyxml2.obj
          Debug\VertexBuffer.obj
-            Creating library C:\Users\85\Desktop\Graficos3\Debug\myEngine1.0.lib and object C:\Users\85\Desktop\Graficos3\Debug\myEngine1.0.exp
-         myEngine1.0.vcxproj -> C:\Users\85\Desktop\Graficos3\Debug\myEngine1.0.dll
-     1>Done Building Project "C:\Users\85\Desktop\Graficos3\myEngine1.0\myEngine1.0.vcxproj" (Build target(s)).
+         myEngine1.0.vcxproj -> C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\Debug\myEngine1.0.dll
+     1>Done Building Project "C:\Users\85\Documents\GitHub\PablitoClavoUnClavitoChino\myEngine1.0\myEngine1.0.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:01:44.93
+Time Elapsed 00:00:01.32

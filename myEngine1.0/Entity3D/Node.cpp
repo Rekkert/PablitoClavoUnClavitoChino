@@ -207,15 +207,10 @@ void Node::PlayAnim(std::string sName){
 			if (m_pCurrentAnim != NULL) {
 				m_pCurrentAnim->Stop();
 			}
-
 			SetAnim(sName);
-
 		}
-
 		m_pCurrentAnim->Play();
-
 	}
-
 }
 //---------------------------------------------------------------
 void Node::CalculateBB() {
@@ -270,99 +265,60 @@ void Node::CalculateBB() {
 		if(vChildMax.x > v_MaxBound.x) {
 			v_MaxBound.x = vChildMax.x;
 		}
-
 		if(vChildMax.y > v_MaxBound.y) {
 			v_MaxBound.y = vChildMax.y;
 		}
-
 		if(vChildMax.z > v_MaxBound.z) {
 			v_MaxBound.z = vChildMax.z;
 		}
-
 		if(vChildMin.x < v_MinBound.x) {
 			v_MinBound.x = vChildMin.x;
 		}
-
 		if(vChildMin.y < v_MinBound.y) {
 			v_MinBound.y = vChildMin.y;
 		}
-
 		if(vChildMin.z < v_MinBound.z) {
 			v_MinBound.z = vChildMin.z;
 		}
-
 	}
 
 	m_vBB[0].x = v_MaxBound.x;
-
 	m_vBB[0].y = v_MaxBound.y;
-
 	m_vBB[0].z = v_MaxBound.z;
 
-
-
 	m_vBB[1].x = v_MaxBound.x;
-
 	m_vBB[1].y = v_MinBound.y;
-
 	m_vBB[1].z = v_MaxBound.z;
 
-
-
 	m_vBB[2].x = v_MinBound.x;
-
 	m_vBB[2].y = v_MinBound.y;
-
 	m_vBB[2].z = v_MaxBound.z;
 
-
-
 	m_vBB[3].x = v_MinBound.x;
-
 	m_vBB[3].y = v_MaxBound.y;
-
 	m_vBB[3].z = v_MaxBound.z;
 
-
-
 	m_vBB[4].x = v_MaxBound.x;
-
 	m_vBB[4].y = v_MaxBound.y;
-
 	m_vBB[4].z = v_MinBound.z;
 
-
-
 	m_vBB[5].x = v_MaxBound.x;
-
 	m_vBB[5].y = v_MinBound.y;
-
 	m_vBB[5].z = v_MinBound.z;
 
-
-
 	m_vBB[6].x = v_MinBound.x;
-
 	m_vBB[6].y = v_MinBound.y;
-
 	m_vBB[6].z = v_MinBound.z;
 
-
-
 	m_vBB[7].x = v_MinBound.x;
-
 	m_vBB[7].y = v_MaxBound.y;
-
 	m_vBB[7].z = v_MinBound.z;
-
 }
 //---------------------------------------------------------------
 void Node::GetBoundings(Vector3* pOutMin, Vector3* pOutMax){
 
 	*pOutMax = v_MaxBound;
-
 	*pOutMin = v_MinBound;
-
 }
 //---------------------------------------------------------------
 void Node::AddAnim(Animation3D* pAnimation){
@@ -370,7 +326,6 @@ void Node::AddAnim(Animation3D* pAnimation){
 	if(!m_mAnimations.count(pAnimation->GetName())) {       
 		m_mAnimations[pAnimation->GetName()] = pAnimation;
 	}
-
 }
 //---------------------------------------------------------------
 void Node::Update(const double& dDeltaTime){
@@ -378,7 +333,6 @@ void Node::Update(const double& dDeltaTime){
 	if(m_pCurrentAnim != NULL) {
 		m_pCurrentAnim->Update(dDeltaTime);
 	}
-
 }
 //---------------------------------------------------------------
 void Node::SetAnim(std::string sName){
@@ -386,16 +340,13 @@ void Node::SetAnim(std::string sName){
 	if (m_mAnimations.count(sName)) {
 
 		Animation3D* pAnimation = m_mAnimations[sName];
-
 		SetAnim(pAnimation);
-
 	}
-
 }
 //---------------------------------------------------------------
 void Node::SetAnim(Animation3D* pAnimation){
 
-	//le asigna a los childs, accede al keyframeindex por su nombre
+	//Asigna anims a los hijos y accede al keyframeindex de cada anim
 
 	m_pCurrentAnim = pAnimation;
 
